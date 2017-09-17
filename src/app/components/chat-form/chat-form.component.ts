@@ -22,5 +22,6 @@ export class ChatFormComponent implements OnInit {
     if(event.keyCode === 13 ){
       this.send();
     }
+    // console.log(event.keyCode);
   }
 }

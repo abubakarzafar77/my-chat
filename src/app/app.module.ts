@@ -18,11 +18,8 @@ import { SignupFormComponent } from './components/signup-form/signup-form.compon
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
-
-
 import { ChatService } from './services/chat.service';
 import { AuthService } from './services/auth.service';
-
 import { appRoutes } from '../routes';
 import { environment } from '../environments/environment'
 
