@@ -34,7 +34,7 @@ export class ChatService {
     this.chatMessages.push({
       message: msg,
       timestamp: timestamp,
-      userName: "test users",
+      userName: "Abubakar",
       // userName: this.userName,
       email: email
     });
@@ -42,7 +42,7 @@ export class ChatService {
  
   public getMessages(): FirebaseListObservable<ChatMessage[]> {
     //query to create out message feed binding 
-    console.log( this.db.database.ref("messages") );
+    console.log("getMessage");
     return this.db.list('messages',{
       query: {
         limitToLast:25,
