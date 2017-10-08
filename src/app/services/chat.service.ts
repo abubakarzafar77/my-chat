@@ -12,21 +12,21 @@ import { User } from '../models/user.model';
 
 @Injectable()
 export class ChatService {
-  
+
   public user: any;
   public chatMessages: FirebaseListObservable<ChatMessage[]>;
   public ChatMessage: ChatMessage;
   public userName: Observable<string>;
 
-  constructor( private db: AngularFireDatabase, private afAuth: AngularFireAuth ) {
+  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) {
     // this.afAuth.authState.subscribe(auth => {
     //   if(auth !== undefined && auth !== null){
     //     this.user = auth;
     //   }
     // })
-   }
+  }
 
-  public sendMessage(msg: string){
+  public sendMessage(msg: string) {
     const timestamp = this.getTimeStamp();
     const email = "test@gmail.com";
     // const email = this.user.email;
@@ -39,14 +39,14 @@ export class ChatService {
       email: email
     });
   }
- 
+
   public getMessages(): FirebaseListObservable<ChatMessage[]> {
     //query to create out message feed binding 
     console.log("getMessage");
-    return this.db.list('messages',{
+    return this.db.list('messages', {
       query: {
-        limitToLast:25,
-        orderByKey:true
+        limitToLast: 25,
+        orderByKey: true
       }
     });
   }
